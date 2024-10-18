@@ -5,8 +5,8 @@ import { viteBundler } from '@vuepress/bundler-vite'
 export default defineUserConfig({
   lang: 'en-US',
 
-  title: 'VuePress',
-  description: 'My first VuePress Site',
+  title: 'Aiflutter Docs',
+  description: 'This is a low code platform tutorial site.',
 
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',
