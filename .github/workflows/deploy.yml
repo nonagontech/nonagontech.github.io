@@ -46,13 +46,13 @@ jobs:
       - name: Run Build Script
         run: npm run docs:build
         
-      # - name: Deploy
-      #   uses: JamesIves/github-pages-deploy-action@releases/v3
-      #   with:
-      #   # env:
-      #     # 部署到 FrontPages 分支
-      #     BRANCH: FrontPages
-      #     # 部署目录为 VuePress 的默认输出目录
-      #     FOLDER: docs/.vuepress/dist
-      #     # 当前仓库的密钥
-      #     SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+        # env:
+          # 部署到 docs 分支
+          BRANCH: docs
+          # 部署目录为 VuePress 的默认输出目录
+          FOLDER: docs/.vuepress/dist
+          # 当前仓库的密钥
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
